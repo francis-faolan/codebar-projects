@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- Document Type Declaration - tells browser this is HTML5 -->
+<html> <!-- Root HTML element - wraps all content on the page -->
+<head> <!-- Head element - contains metadata not visible on page (title, styles, scripts) -->
+  <title>Faolán Bell</title> <!-- Title element - text shown in browser tab -->
+
+  <style> <!-- Style element - contains CSS (Cascading Style Sheets) for visual styling -->
+
+    /* CSS Selector: body - targets the <body> element */
+    body {
+      /* CSS Properties - define how the body should look/behave */
+      margin:0; /* Removes default spacing around body edges */
+      padding:0; /* Removes default internal spacing */
+      min-height: 100vh; /* vh = viewport height unit. 100vh = 100% of browser window height. Ensures body is at least full screen height */
+      position:relative; /* Positioning property - makes body the reference point for absolutely positioned children */
+      text-align: center; /* Aligns inline/text content to center horizontally */
+      background: url("../../assets/tom-bell_paris/tom-bell-011.jpeg"); /* Background property - sets background image. ../../ = go up 2 directories to root */
+      background-repeat: repeat; /* Makes background image tile/repeat across entire body */
+      background-size: 50% 50%; /* Sets each tile to be 50% of viewport width and 50% of viewport height */
+      color: white; /* Sets text color to white */
+      font-family: calibri; /* Sets font typeface to Calibri */
+    }
+
+    /*I removed the tiled background in subsequent version but keeping in these notes for future reference */
+
+    /* CSS Class Selector: .logo-image - targets any element with class="logo-image" */
+    /* The period (.) indicates this is a class selector */
+    .logo-image {
+      position: absolute; /* Positioning property - removes from normal flow, positions relative to nearest positioned ancestor (body) */
+      top: 50%; /* Positions element's TOP EDGE at 50% down from parent's top */
+      left: 50%; /* Positions element's LEFT EDGE at 50% from parent's left */
+      /* At this point, the top-left corner is centered, but the image itself is not */
+
+      transform: translate(-50%, -50%); /* Transform property using translate() function */
+      /* translate(x, y) - moves element from its current position */
+      /* -50% = move LEFT by 50% of element's own width */
+      /* -50% = move UP by 50% of element's own height */
+      /* This shifts the element so its CENTER (not top-left corner) is at the screen center */
+
+      max-width: 300px; /* Sets maximum width - element won't grow larger than 300px */
+      width: 30%; /* Sets width to 30% of viewport width - makes it responsive */
+      /* On small screens, 30% might be less than 300px, so width: 30% applies */
+      /* On large screens, 30% might exceed 300px, so max-width: 300px caps it */
+
+      height: auto; /* Height adjusts automatically to maintain image's aspect ratio */
+    }
+
+    /* Element Selector: p - targets all <p> (paragraph) elements */
+    p {
+      font-size: 22px; /* Sets text size to 22 pixels */
+    }
+
+    /* Element Selector: input - targets all <input> elements */
+    input {
+      border: 0; /* Removes border (0 width) */
+      padding: 10px; /* Adds 10px internal spacing on all sides */
+      font-size: 18px; /* Sets text size to 18 pixels */
+    }
+
+    /* Attribute Selector: input[type="submit"] - targets <input> elements where type attribute equals "submit" */
+    /* More specific than plain "input", so it overrides those styles for submit buttons */
+    input[type="submit"] {
+      background: red; /* Sets background color to red */
+      color: white; /* Sets text color to white */
+    }
+
+  </style>
+</head>
+
+<body> <!-- Body element - contains all visible page content -->
+
+  <!-- Image element - displays an image -->
+  <!-- src attribute = source file path (../../ goes up 2 directories to root, then into assets folder) -->
+  <!-- class attribute = assigns CSS class "logo-image" to apply those styles -->
+  <img src="../../assets/mistinguett/mistinguett-by-nadar.jpg" class="logo-image">
+
+  <!-- Paragraph element - displays text content -->
+  <p>Hi! I'm Anna, a Paris-based marketer. Say salut!</p>
+
+  <!-- Input element - creates form input field -->
+  <!-- type="email" - validates email format -->
+  <!-- placeholder attribute - shows hint text that disappears when user types -->
+  <input type="email" placeholder="Your email">
+
+  <!-- Input element - creates submit button -->
+  <!-- type="submit" - identifies this as a form submission button -->
+  <input type="submit">
+
+</body>
+</html> <!-- Closing html tag - must close all opened tags -->
