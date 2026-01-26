@@ -2,239 +2,31 @@
 <html>
 <head>
   <title>Mistinguett, le Genie du Marketing</title>
-  <style>
-    body {
-      margin:0;
-      padding:0;
-      min-height: 100vh; /* ln (learning notes) - makes body at least full viewport height */
-      position:relative; /* ln - makes this the reference point for absolute positioning */
-      color: white;
-      font-family: calibri;
-      }
-
-    .background-image {
-      position: fixed;      /* stays behind content */
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      z-index: -1;          /* behind everything */
-      overflow: hidden;
-    }
-
-    .background-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: right;
-    }
-    .logo {
-      width: 300px;             /* size of the circle */
-      height: 300px;
-      display: flex;
-      border-radius: 50%;       /* makes it circular */
-      overflow: hidden;         /* crops anything outside the circle */
-      display: flex;
-      justify-content: center;  /* centers content inside */
-      align-items: center;
-      margin-bottom: 20px; /* spacing below logo */
-      border: 4px solid red;
-      }
-
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 30%;
-    }
-
-    .top-centre {
-      min-height: 100vh;          /* full viewport height */
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: flex-start; /* start from top */
-      align-items: center;         /* horizontal centering */
-      padding: 50px;
-    }
-
-    .text-block {
-      display: inline-block;
-      width: 100%;
-      text-align: center;     /* center everything in this block */
-      max-width: 600px;       /* optional: keep block from being too wide */
-      padding: 0 10px;        /* optional: padding inside the block */
-      margin-bottom: 40px;   /* space between this block and others */
-    }
-
-    .text-block p {
-      max-width: 600px;
-      display: block;
-      line-height: 1.4px;
-      word-wrap: break-word;     /* Forces long words to wrap to the next line */
-      overflow-wrap: break-word; /* Ensures text inside blocks wraps properly */
-      word-break: break-word;
-      white-space: normal;  
-    }
-
-    .text-block p:nth-child(1),
-    .text-block p:nth-child(2) {
-      margin-bottom: 10px;
-    }
-
-    .text-block p:nth-child(3) {
-      margin-top: 40px;
-      margin-bottom: 10px;
-
-    }
-
-    .text-block span {
-      background-color: rgba(255, 255, 255, 0.8); /* highlight effect */
-      color: black;
-      border: 2px solid red;
-      padding: 20px;
-      border-radius: 2px;   /* rounded edges */
-      font-size: 22px;
-      display: inline-block;
-    }
-
-    .email-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%
-    }
-
-    .email-form input[type="email"] {
-      width: 400px;
-      padding: 10px;
-      font-size: 18px;
-      font-style: italic;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-      background-color: white;
-      color: black;
-      text-align: center;
-      border-radius: 10px;
-      border-color: black;
-    }
-
-    .email-form input[type="submit"] {
-      width: 100px;
-      padding: 10px;
-      font-size: 18px;
-      box-sizing: border-box;
-      background-color: rgba(252, 0, 0, 0.8); 
-      color: white;
-      font-size: 20px;
-      text-align: center;
-      border-radius: 2px;
-      border-color: white;
-    }
-
-    /* =======================
-   media queries - for responsive design e.g., mobile devices
-   ======================= */
-@media (max-width: 800px) { /* medium screens / tablets */
-    .logo {
-        width: 30vw;
-        height: 30vw;
-    }
-
-    .top-centre {
-        padding-top: 8vh;
-    }
-
-    .text-block p {
-        font-size: 4.5vw;
-    }
-
-    body {
-        background-position: 75% center; /* move image slightly left */
-    }
-}
-
-@media (max-width: 600px) { /*small screens like phones */
-    .logo {
-        width: 35vw;
-        height: 35vw;
-    }
-
-    .top-centre {
-        padding-top: 5vh;
-        padding-left: 4vw;
-        padding-right: 4vw;
-    }
-
-    .text-block p {
-        font-size: 5vw;
-    }
-
-    .text-block span {
-        font-size: 5vw;
-    }
-
-    body {
-        background-position: 75% center;
-    }
-
-    .email-form input[type="email"],
-    .email-form input[type="submit"] {
-      width: 90%;      /* keeps inputs inside viewport */
-      max-width: 90vw; /* ensure they don’t overflow */
-      font-size: 4vw;
-    }
-}
-
-/* very small screens */
-@media (max-width: 400px) {
-    .logo {
-        width: 40vw;
-        height: 40vw;
-    }
-
-    .top-centre {
-        padding-top: 4vh;
-        padding-left: 3vw;
-        padding-right: 3vw;
-    }
-
-    .text-block p {
-        font-size: 5.5vw;
-    }
-
-    body {
-        background-position: center center; /* fully center background */
-    }
-}
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
- <!-- Page-centered logo -->
   <div class="background-image">
-    <img src="../../assets/tom-bell_paris/tom-bell-011.jpeg" alt ="Background">
-   </div>
+      <img src="../../assets/tom-bell_paris/tom-bell-011.jpeg" alt ="Background">
+  </div>
 
-  <div class="top-centre">
-    <div class="logo">
-    <img src="../../assets/mistinguett/mistinguett-by-nadar.jpg" alt="logo">
-    </div>
-    <div class="text-block">
-      <p><span>Salut! I'm Mistinguett,</span></p>
-      <p><span>a Paris-based marketer.</span></p>
-      <p><span>Dites Bonjour!</span></p>
-      
+  <div class="container">
+    <div class="hero"> 
+      <div class="logo">
+      <img src="../../assets/mistinguett/mistinguett-moulin-rouge-edited-bw2.png" alt ="logo">
+      </div>
+      <div class="speech-text-blocks">
+        <p><span>Salut! I'm Mistinguett,</span></p>
+        <p><span>a Paris-based marketer.</span></p>
+      </div>
+
+    <div class = "email-cta">
+      <p><span>on va s'écrire...?</span></p>
       <form class = "email-form">
         <input type="email" placeholder="votre email s'il vous plait ...">
-        <input type="submit" placeholder="ENVOYER!">
+        <input type="submit" value="ENVOYER!">
       </form>
     </div>
-
   </div>
- 
-
 </body>
 </html>
 

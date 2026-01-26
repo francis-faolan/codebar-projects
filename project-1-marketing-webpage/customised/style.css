@@ -1,0 +1,213 @@
+    body {
+      margin:0;
+      padding:0;
+      min-height: 100vh; /* ln (learning notes) - makes body at least full viewport height */
+      position:relative; /* ln - makes this the reference point for absolute positioning */
+      color: white;
+      font-family: courier, 'special_elite';
+      }
+
+    @font-face {
+      font-family: 'special_elite';
+      src: url('../../assets/fonts/SpecialElite-Regular.woff2') format('woff2');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .background-image {
+      position: fixed;      /* stays behind content */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -1;          /* behind everything */
+      overflow: hidden;
+    }
+
+    .background-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right;
+    }
+    .logo {
+      width: 300px;             /* size of the circle */
+      height: 300px;
+      display: flex;
+      border-radius: 50%;       /* makes it circular */
+      overflow: hidden;         /* crops anything outside the circle */
+      display: flex;
+      justify-content: center;  /* centers content inside */
+      align-items: center;
+      margin-bottom: -5px; /* spacing below logo */
+      border: 8px solid rgb(203, 29, 35);
+      }
+
+    .logo img {
+      width: 200%;
+      height: 225%;
+      object-fit: cover;
+      object-position: -35px 130px;
+    }
+
+    .container {
+      min-height: 100vh;          /* full viewport height */
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start; /* start from top */
+      align-items: center;         /* horizontal centering */
+      padding: 30px;
+    }
+
+    .speech-text-block {
+      display: inline-block;
+      width: 100%;
+      text-align: center;     /* center everything in this block */
+      max-width: 600px;       /* optional: keep block from being too wide */
+      padding: 0 10px;        /* optional: padding inside the block */
+      margin-bottom: 40px;  
+    }
+
+    .speech-text-block p {
+      max-width: 600px;
+      display: block;
+      line-height: 2px;
+      word-wrap: break-word;     /* Forces long words to wrap to the next line */
+      overflow-wrap: break-word; /* Ensures text inside blocks wraps properly */
+      word-break: break-word;
+      white-space: normal;
+      font-family: special_elite;
+      font-size: 30px;
+    }
+
+    .speech-text-block p:nth-child(1) span, p:nth-child(2) span {
+      margin-bottom: -12px;
+      border: 2px solid rgb(0, 0, 0);
+      position: relative;
+    }
+
+    .speech-text-block p:nth-child(3) span {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      border: 4px solid rgb(197, 11, 23);
+
+    }
+    .speech-text-block span {
+      background-color: rgba(255, 255, 255, 0.8); /* highlight effect */
+      color: black;
+      padding: 22px;
+      border-radius: 2px;   /* rounded edges */
+      display: inline-block;
+    }
+
+    .email-cta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%
+    }
+
+    .email-cta input[type="email"] {
+      width: 400px;
+      padding: 10px;
+      font-size: 18px;
+      font-style: italic;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      background-color: white;
+      color: black;
+      text-align: center;
+      border-radius: 10px;
+      border-color: black;
+    }
+
+    .email-cta input[type="submit"] {
+      width: 100px;
+      padding: 10px;
+      font-size: 18px;
+      box-sizing: border-box;
+      background-color: rgba(29, 60, 116, 0.8); 
+      color: white;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 2px;
+      border-color: white;
+    }
+
+    /* =======================
+   media queries - for responsive design e.g., mobile devices
+   ======================= */
+@media (max-width: 800px) { /* medium screens / tablets */
+    .logo {
+        width: 50vw;
+        height: 30vw;
+    }
+
+    .container {
+        padding-top: 8vh;
+    }
+
+    .speech-text-block p {
+        font-size: 4.5vw;
+    }
+
+    body {
+        background-position: 75% center; /* move image slightly left */
+    }
+}
+
+    @media (max-width: 600px) { /*small screens like phones */
+    .logo {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .container {
+        padding-top: 5vh;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .speech-text-block p {
+        font-size: 5vw;
+    }
+
+    .speech-text-block span {
+        font-size: 5vw;
+    }
+
+    body {
+        background-position: 75% center;
+    }
+
+    .email-cta input[type="email"],
+    .email-cta input[type="submit"] {
+      width: 90%;      /* keeps inputs inside viewport */
+      max-width: 90vw; /* ensure they don’t overflow */
+      font-size: 4vw;
+    }
+}
+
+/* very small screens */
+@media (max-width: 400px) {
+    .logo {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .container {
+        padding-top: 4vh;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .speech-text-block p {
+        font-size: 5.5vw;
+    }
+
+    body {
+        background-position: center center; /* fully center background */
+    }
+}
