@@ -4,73 +4,62 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mistinguett: Génie Fantomatique du Marketing</title>
-        <meta name="description" content="You may remember Mistinguett for her midnight performances at the Moulin Rouge, and the frisson she could inspire with just one look. But did you know that she is also an expert in Marketing and Communications? Come, enter the world of Mistinguett, and find out what La Reine of the Parisien Night can do for you."> <!-- shows on Google, access, SEO !-->
-        <link rel="icon" href="../../assets/mistinguett/mistinguett-edited.png">        <meta property= "og:title" content="Mistinguett: Génie Fantomatique du Marketing"> <!-- open graph tags: control how urls appear when shared on social media !-->
-        <meta property= "og:description" content="You may remember Mistinguett for her midnight performances at the Moulin Rouge, or for the frisson she could inspire with just one look. But did you know that she is also an expert in Marketing and Communications? Come, enter the world of Mistinguett, and find out what La Reine of the Parisien Night can do for you."> <!-- shows on Google, access, SEO !-->
-        <meta property= "og:image" content="../../assets/mistinguett/mistinguett-au-casino.jpeg"> 
-        <meta property= "og:site_name" content="Mistinguett: Génie Fantomatique du Marketing">
+        <meta name="description" content="You may remember Mistinguett for her midnight performances at the Moulin Rouge, and the frisson she could inspire with just one look. But did you know that she is also an expert in Marketing and Communications? Come, enter the world of Mistinguett, and find out what La Reine of the Parisien Night can do for you.">
+        <link rel="icon" href="../../assets/mistinguett/mistinguett-edited.png">
+        <meta property="og:title" content="Mistinguett: Génie Fantomatique du Marketing">
+        <meta property="og:description" content="You may remember Mistinguett for her midnight performances at the Moulin Rouge, or for the frisson she could inspire with just one look. But did you know that she is also an expert in Marketing and Communications? Come, enter the world of Mistinguett, and find out what La Reine of the Parisien Night can do for you.">
+        <meta property="og:image" content="../../assets/mistinguett/mistinguett-au-casino.jpeg">
+        <meta property="og:site_name" content="Mistinguett: Génie Fantomatique du Marketing">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body aria-label="Website with striking monochrome background. The photograph shows a woman with a model's aesthetic striding past the Eiffel Tower.">
+
+    <body>
+        <div class="bg">
+            <img src="../../assets/mistinguett/mistinguett-avec-a-crowd-and-furs-edit-2.png"
+                 alt="Black and white photograph showing a crowd of men surrounding Mistinguett as she shakes someone's hand, regal in a thick fur shawl."
+                 class="bg__image">
+        </div>
+
         <a href="#maincontent" class="skip-link">Skip to main content</a>
         <main id="maincontent">
-            <!-- HERO SECTION !-->
-            <section class="hero">
-                <div class="hero__content">
-                    <figure class="hero__branding">
-                        <img src="../../assets/mistinguett/mistinguett-au-casino.jpeg" 
-                             alt="Art Deco poster of Mistinguett, Parisian cabaret star, grinning in a swirl of dramatic white feathers"
-                             class="hero__image">
-                        <figcaption class="hero__caption">
-                            <p class="text-block text-block--hero"> Salut, I'm Mistinguett, a Paris-based Marketer with 150 years experience</p>
-                            <p class="text-block text-block--hero"> drawing people's eyes exactly where I want them</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </section>
-            
-            <!-- CTA EMAIL SECTION !-->
-            <section class="cta-email">
-                <div class="cta-email__content">
-                    <p class="text-block text-block--cta"> Give me your email, and I'll give you the key to a worldwide reputation</p>
-                    <form class="cta-email__form">
-                        <label for="email" class="visually-hidden">Email Address</label>
-                        <input type="email" 
-                               id="email" 
-                               name="email" 
-                               required 
-                               placeholder="n'hésitez-pas@gmail.com"
-                               class="cta-email__input">
-                        <button type="submit" class="cta-email__button">Submit</button>
-                    </form> 
-                </div>
-            </section>
+            <div class="content-column">
+                <div class="content-column__logo-group">
+                    <div class="content-column__logo-frame">
+                        <img src="../../assets/mistinguett/mistinguett-avec-un-chien.jpeg"
+                             alt="Art Deco poster of Mistinguett with a dog"
+                             class="content-column__logo-image">
+                    </div>
+               </div>
+                <p class="text-block text-block--intro">
+                    <span class="text-block__segment">Salut!</span>
+                    <span class="text-block__segment">I'm Mistinguett</span>
+                </p>
+                <p class="text-block text-block--occupations">
+                    <span class="text-block__segment">Marketing Expert</span>
+                    <span class="text-block__segment">Moulin Rouge Performer</span>
+                    <span class="text-block__segment">Queen of the Parisian Night</span>
+                </p>
+            </div>
+            <div class="speech-group">
+                <p class="text-block text-block--penchant">I have a particular penchant</p>
+                <p class="text-block text-block--eyes">for drawing people's eyes</p>
+                <p class="text-block text-block--flirt">exactly where I want them.</p>
+            </div>
+            <form class="cta-form">
+                <label for="email" class="visually-hidden">Email Address</label>
+                <p class="text-block text-block--cta">
+                    <span class="text-block__segment">So give me your email, chérie...</span>
+                    <span class="text-block__segment">& I'll give you the key</span>
+                    <span class="text-block__segment">to a worldwide reputation</span>
+                </p>
+                <input type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="n'hésitez-pas@gmail.com"
+                    class="cta-form__input">
+                <button type="submit" class="cta-form__button">Submit</button>
+            </form>
         </main>
-</body>
+    </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
