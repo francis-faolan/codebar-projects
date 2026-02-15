@@ -1,37 +1,105 @@
 <!DOCTYPE html>
 <head>
   <link href="/normalize.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    header {
-      text-align: center;
-      background: url('../../assets/mistinguett/mistinguett-illustration-revue-des-follies.jpeg');
-      background-size: cover;
-      color: white;
+     @font-face {
+      font-family: 'SpecialElite';
+      src: url('../../assets/fonts/SpecialElite-Regular.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
+
+    body {
+      background-color: #090935;
+      margin: 0;
+    }
+    header {
+      min-height: 53vh;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      background: url('../../assets/mistinguett/mistinguett-edited.png');
+      background-size: 65%;
+      background-position: center 40%;
+      color: white;
+      border: 8px solid #b3df7b;
+    }
+    .overlap-img {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 100%);
+      max-width: 600px;
+      border: 3px solid #090935;
+      border-radius: 0;
+      margin-bottom: 40px;
+    }
+
     a {
       color: white;
     }
+    
     h1 {
-      font-size: 70px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -15%);
+      width: 100%;
+      margin: 0;
+      z-index: 2;
+      font-size: 60px;
+      font-family: 'SpecialElite';
+      font-style: italic;
+      color: red;
+      text-shadow: 8px 2px 8px white;
     }
-    img {
-      margin: 40px 0px 0px 0px;
-      border: 7px solid white;
-      border-radius: 20px;
-    }
+    
     ul {
-      padding: 10px;
-      background: rgba(0,0,0,0.5);
+      font-size: 20px;
+      font-family: 'SpecialElite';
+      padding: 20px 20px 20px 20px;
+      background: #cc3b3b;
+      margin: 0;
+      border: 8px solid #b3df7b;
     }
+    
+    ul a {
+      color: white;
+    }
+    
     li {
       display: inline;
       padding: 0px 10px 0px 10px;
     }
-    article {
-      max-width: 500px;
-      padding: 20px;
+    
+    .content-column {
+      max-width: 50%;
       margin: 0 auto;
+      margin-top: -50px;
+      position: relative;
+      z-index: 0;
+      background: #e1e1e1;
+      min-height: 100vh;
+      padding-top: 40px;
+      border: 8px solid #b3df7b;
     }
+    
+    article {
+      max-width: 900px;
+      padding: 10px;
+      margin: 20px auto;
+      border: 3px solid #a1c2ca;
+      background: white;
+      font-size: 12px;
+    }
+
+    h2 {
+      font-style: italic;
+    }
+    
     @media (max-width: 500px) {
       h1 {
         font-size: 36px;
@@ -46,29 +114,31 @@
 </head>
 <body>
   <header>
-    <img src="/assets/jeff.png">
-    <h1>Jeff's Blog</h1>
     <ul>
       <li><a href="#">About Me</a></li>
-      <li><a href="#">Best Poems</a></li>
-      <li><a href="#">Worst Poems</a></li>
+      <li><a href="#">About You</a></li>
+      <li><a href="#">About Nous...?</a></li>
     </ul>
+    <h1>Le Carnet Charnal de</h1>
+    <img class="overlap-img" src="../../assets/mistinguett/mistinguett-edited-text.png" alt="Le Carnet Charnal de Mistinguett">
   </header>
-  <article>
-    <h2>VHS umami pop-up trust fund</h2>
-    <p>Marfa church-key kitsch bicycle rights, 8-bit mixtape cardigan gentrify Echo Park. Street art swag brunch, next level roof party Schlitz hella organic keffiyeh selfies. You probably haven't heard of them polaroid hashtag +1, meggings biodiesel Portland High Life cray tumblr retro.</p>
-    <button>Like</button>
-  </article>
-  <article>
-    <h2>Sartorial synth Echo Park, roof party</h2>
-    <p>chambray you probably haven't heard of them pour-over viral selvage umami skateboard VHS post-ironic selfies. Wes Anderson gentrify fanny pack twee, bicycle rights bitters blog keffiyeh plaid flannel. Tonx irony cliche sustainable mlkshk bitters. Four loko leggings chambray Vice.</p>
-    <button>Like</button>
-  </article>
-  <article>
-    <h2>Forage food truck keytar master cleanse</h2>
-    <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
-    <button>Like</button>
-  </article>
+  <div class="content-column">
+    <article style="margin-top: 120px;">
+      <h2>Ma Rivale, Mon Amie: The Night Joséphine Baker and I Shared the Stage</h2>
+      <p>Oh! je voudrais tant que tu te souviennes Des jours heureux où nous étions amis En ce temps-là la vie était plus belle Et le soleil plus brûlant qu'aujourd'hui Les feuilles mortes se ramassent à la pelle Tu vois, je n'ai pas oublié Les feuilles mortes se ramassent à la pelle Les souvenirs et les regrets aussi Et le vent du nord les emporte Dans la nuit froide de l'oubli Tu vois, je n'ai pas oublié La chanson que tu me chantais</p>
+      <button>Like</button>
+    </article>
+    <article>
+      <h2>Toy Boys & Cougars: How I Found Love (& Loss) Within Un Écart d'Âge</h2>
+      <p>C'est une chanson qui nous ressemble Toi, tu m'aimais et je t'aimais Et nous vivions tous deux ensemble Toi qui m'aimais, moi qui t'aimais Mais la vie sépare ceux qui s'aiment Tout doucement, sans faire de bruit Et la mer efface sur le sable Les pas des amants désunis</p>
+      <button>Like</button>
+    </article>
+    <article>
+      <h2>Why I Insured My Legs for a Million Dollars</h2>
+      <p>Les feuilles mortes se ramassent à la pelle Les souvenirs et les regrets aussi Mais mon amour silencieux et fidèle Sourit toujours et remercie la vie Je t'aimais tant, tu étais si jolie Comment veux-tu que je t'oublie? En ce temps-là, la vie était plus belle Et le soleil plus brûlant qu'aujourd'hui Tu étais ma plus douce amie Mais je n'ai que faire des regrets Et la chanson que tu chantais Toujours, toujours je l'entendrai!</p>
+      <button>Like</button>
+    </article>
+  </div>
   <script>
     $("button").on("click", function() {
       alert("Clicked!");

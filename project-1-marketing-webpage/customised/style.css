@@ -82,7 +82,7 @@ main {
     width: 20vw;
     min-height: 100vh;
     margin-right: auto;
-    margin-left: 20vw;
+    margin-left: 5vw;
     overflow: visible;
 }
 
@@ -166,7 +166,7 @@ main {
 }
 
 .text-block--occupations {
-    gap: 40px;
+    gap: 70px;
     font-size: 38px;
     font-weight: bold;
     margin-top: 100px;
@@ -180,7 +180,7 @@ main {
 
 .speech-group {
     position: absolute;
-    top: 23%;
+    top: 27%;
     right: 5%;
     display: flex;
     flex-direction: column;
@@ -193,28 +193,28 @@ main {
 
 .text-block--penchant {
     transform: rotate(5deg) translateY(15px) translateX(-220px);
-    font-size: 33px;
+    font-size: 35px;
     font-weight: bold;
 }
 
 .text-block--eyes {
-    font-size: 29px;
+    font-size: 31px;
     transform: rotate(4deg) translateY(50px) translateX(-190px);
 }
 
 .text-block--flirt {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: bold;
     margin-top: 6%;
     color: var(--color-red);
-    transform: rotate(2deg) translateY(55px) translateX(-180px);
+    transform: rotate(2deg) translateY(80px) translateX(-200px);
 }
 
 .text-block--cta {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     background: none;
     border: none;
     padding: 0;
