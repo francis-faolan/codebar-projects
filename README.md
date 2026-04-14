@@ -34,10 +34,8 @@ Alongside studying Codebar's Web Development Foundations course, I am using thes
 
 ## Tech Stack
 
-(Will update as projects progress)
-
 - HTML5
-- CSS3
+- CSS
 - JavaScript
 
 ## Setup
@@ -58,7 +56,6 @@ Original exercises from [Codebar Dash](https://dash.generalassemb.ly/) - a great
 
 ---
 
-💼  As I learn, I am exploring multiple areas, including full stack development, cybersecurity, testing, accessible design, and technical writing. (I believe it is important to develop an understanding of how your work interacts and intersects with other people's - and I find it all interesting!)
 
 I am open to work opportunities in any of these areas. 
 
